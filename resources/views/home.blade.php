@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
     <noscript><link rel="stylesheet" href="{{ asset('assets/css/noscript.css') }}" /></noscript>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="is-preload">
 <div id="wrapper">
@@ -13,6 +15,8 @@
         <header>
             <span class="avatar"><img src="images/users/{{ $user->id }}.jpg" alt="" /></span>
             <h1>{{ $user->name }}</h1>
+            <p><strong>Comments</strong></p>
+            <button>Add Comment</button>
             @foreach(explode("|", $user->comments, 2) as $comment)
                 <p>{{ $comment }}</p>
             @endforeach
