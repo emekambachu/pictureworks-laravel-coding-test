@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
+use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 /**
@@ -22,14 +23,10 @@ class UserService
         return $user;
     }
 
-    public static function appendCommentsToUser($id, $request){
-        $user = self::user()->where('id', $id)->first();
-
-        $commentsFromUser = '';
-        if(!empty($user->comments)){
-            $commentsFromUser = explode(", ", $user->comments);
-            $commentsFromUser[] = $request->comment;
-        }
-
+    public static function appendCommentsToUser($request, $id){
+        $user = self::user()->findOrFail($id);
+        $user->update([
+            'comments' => $user->comments.'|'.$request->comments
+        ]);
     }
 }

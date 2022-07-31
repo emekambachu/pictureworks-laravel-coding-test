@@ -17,7 +17,7 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'password' => '720DF6C2482218518FA20FDC52D4DED7ECC043AB',
-            'comments' => $this->faker->text(100),
+            'comments' => $this->faker->text(60),
         ];
     }
 

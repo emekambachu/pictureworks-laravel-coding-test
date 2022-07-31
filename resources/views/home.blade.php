@@ -11,23 +11,14 @@
 </head>
 <body class="is-preload">
 <div id="wrapper">
-    <section id="main">
-        <header>
-            <span class="avatar"><img src="images/users/{{ $user->id }}.jpg" alt="" /></span>
-            <h1>{{ $user->name }}</h1>
-            <p><strong>Comments</strong></p>
-            <button>Add Comment</button>
-            @foreach(explode("|", $user->comments, 2) as $comment)
-                <p>{{ $comment }}</p>
-            @endforeach
-        </header>
-    </section>
+    <div id="app">
+        <home :user_id="{{ $user->id }}"></home>
+    </div>
     <footer id="footer">
         <ul class="copyright">
             <li>&copy; Pictureworks</li>
         </ul>
     </footer>
-
 </div>
 <script>
     if ('addEventListener' in window) {

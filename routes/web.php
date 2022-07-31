@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'userComments'])
+Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'index'])
     ->name('home');
 
 Auth::routes();
