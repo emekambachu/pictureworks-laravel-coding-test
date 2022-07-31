@@ -8077,6 +8077,63 @@
             "install-path": "../tijsverkoyen/css-to-inline-styles"
         },
         {
+            "name": "timwassenburg/laravel-service-generator",
+            "version": "v1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/timwassenburg/laravel-service-generator.git",
+                "reference": "b141d22aba59fd06974b60a8f6f5b34fc9dcd01c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/timwassenburg/laravel-service-generator/zipball/b141d22aba59fd06974b60a8f6f5b34fc9dcd01c",
+                "reference": "b141d22aba59fd06974b60a8f6f5b34fc9dcd01c",
+                "shasum": ""
+            },
+            "time": "2022-03-21T18:29:00+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TimWassenburg\\ServiceGenerator\\Http\\Providers\\CommandServiceProvider",
+                        "TimWassenburg\\ServiceGenerator\\ServiceGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TimWassenburg\\ServiceGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Wassenburg"
+                }
+            ],
+            "description": "Generate Laravel services",
+            "homepage": "https://github.com/timwassenburg/laravel-service-generator",
+            "keywords": [
+                "artisan",
+                "cli",
+                "generator",
+                "laravel",
+                "pattern",
+                "php",
+                "services"
+            ],
+            "support": {
+                "issues": "https://github.com/timwassenburg/laravel-service-generator/issues",
+                "source": "https://github.com/timwassenburg/laravel-service-generator/tree/v1.0.2"
+            },
+            "install-path": "../timwassenburg/laravel-service-generator"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.4.1",
             "version_normalized": "5.4.1.0",

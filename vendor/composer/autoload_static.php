@@ -54,6 +54,7 @@ class ComposerStaticInit985738164eec616bf97e3ae4b31570d4
         ),
         'T' => 
         array (
+            'TimWassenburg\\ServiceGenerator\\' => 31,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
         ),
@@ -198,6 +199,10 @@ class ComposerStaticInit985738164eec616bf97e3ae4b31570d4
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'TimWassenburg\\ServiceGenerator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/timwassenburg/laravel-service-generator/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -5540,6 +5545,11 @@ class ComposerStaticInit985738164eec616bf97e3ae4b31570d4
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'TimWassenburg\\ServiceGenerator\\Console\\MakeController' => __DIR__ . '/..' . '/timwassenburg/laravel-service-generator/src/Console/MakeController.php',
+        'TimWassenburg\\ServiceGenerator\\Console\\MakeModel' => __DIR__ . '/..' . '/timwassenburg/laravel-service-generator/src/Console/MakeModel.php',
+        'TimWassenburg\\ServiceGenerator\\Console\\MakeService' => __DIR__ . '/..' . '/timwassenburg/laravel-service-generator/src/Console/MakeService.php',
+        'TimWassenburg\\ServiceGenerator\\Http\\Providers\\CommandServiceProvider' => __DIR__ . '/..' . '/timwassenburg/laravel-service-generator/src/Http/Providers/CommandServiceProvider.php',
+        'TimWassenburg\\ServiceGenerator\\ServiceGeneratorServiceProvider' => __DIR__ . '/..' . '/timwassenburg/laravel-service-generator/src/ServiceGeneratorServiceProvider.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',

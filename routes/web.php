@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user/{id}', static function () {
-    return view('home');
-});
+Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'userComments'])
+    ->name('home');
 
 Auth::routes();
