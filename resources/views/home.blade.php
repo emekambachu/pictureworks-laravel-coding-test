@@ -1,23 +1,33 @@
-@extends('layouts.app')
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>User Card - <?=$user->name?></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ asset('assets/css/noscript.css') }}" /></noscript>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <section id="main">
+        <header>
+            <span class="avatar"><img src="images/users/<?=$user->id?>.jpg" alt="" /></span>
+            <h1><?=$user->name?></h1>
+            <p><?=nl2br($user->comments)?></p>
+        </header>
+    </section>
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; Pictureworks</li>
+        </ul>
+    </footer>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-@endsection
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+</body>
+</html>
