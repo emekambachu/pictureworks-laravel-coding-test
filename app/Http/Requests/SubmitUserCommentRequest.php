@@ -25,7 +25,7 @@ class SubmitUserCommentRequest extends FormRequest
      */
     public function rules()
     {
-        $staticPassword = '720DF6C2482218518FA20FDC52D4DED7ECC043AB';
+        $staticPassword = '00000000';
         return [
             'password' => 'required|in:'.$staticPassword,
             'comments' => 'required',

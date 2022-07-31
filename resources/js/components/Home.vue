@@ -21,9 +21,9 @@
             <button v-else @click="comment = true">Add Comment</button><br>
             <div v-if="user.comments">
                 <p><strong>Comments</strong></p>
-                <p v-for="(comment, index) in user.comments.split('|')" :key="index">
-                    {{ comment }}
-                </p>
+                <span v-for="(comment, index) in user.comments.split('|')" :key="index">
+                    {{ comment }}<br><hr>
+                </span>
             </div>
         </header>
     </section>

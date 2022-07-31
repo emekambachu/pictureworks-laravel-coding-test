@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class UserFactory extends Factory
@@ -16,7 +17,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'password' => '720DF6C2482218518FA20FDC52D4DED7ECC043AB',
+            'password' => Hash::make('00000000'),
             'comments' => $this->faker->text(60),
         ];
     }
