@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'index'])
-    ->name('home');
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])
+    ->name('users');
+Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'show'])
+    ->name('user.show');
 
 Auth::routes();
