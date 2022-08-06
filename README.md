@@ -15,6 +15,8 @@
 - Service files for business logic are stored in the Services folder
 - Created UserService for all business logic.
 - Created BaseService for frequently used business logic.
+- Comments are created and validated on each user page.
+- Static password to comment is '00000000'.
 
 
 ## Routes
