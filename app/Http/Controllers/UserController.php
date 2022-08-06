@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function allUsers(){
         try{
-            $users = UserService::userWithRelationships();
+            $users = UserService::userWithRelationships()->orderBy('name')->get();
             return response()->json([
                 'success' => true,
                 'users' => $users,
@@ -30,7 +30,7 @@ class UserController extends Controller
 
     public function show($id){
         try{
-            $user = UserService::commentsFromUserId($id);
+            $user = UserService::user()->findOrFail($id);
             return view('show', compact('user'));
 
         }catch (\Exception $error){
@@ -53,7 +53,7 @@ class UserController extends Controller
 
     public function addUserComment(SubmitUserCommentRequest $request, $id){
         try {
-            UserService::appendCommentsToUser($request, $id);
+            UserService::addCommentsToUser($request, $id);
         } catch (Exception $e) {
             BaseService::errorExceptions($e);
         }

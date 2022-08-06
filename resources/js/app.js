@@ -23,6 +23,7 @@ import VueAxios from 'vue-axios';
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 import Home from './components/Home';
+import UserAndComments from './components/UserAndComments';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -32,7 +33,8 @@ import Home from './components/Home';
 
 const app = createApp({
     components: {
-       Home
+       Home,
+       UserAndComments,
     }
 }).use(
     router, axios, VueAxios

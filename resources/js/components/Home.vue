@@ -5,7 +5,7 @@
             <span class="avatar"><img :src="'/images/users/'+user.id+'.jpg'" alt="" /></span>
             <h1>{{ user.name }}</h1>
             <div v-if="user.comments">
-                <p><strong>{{ user.comments.length }} Comment(s)</strong></p>
+                <p><a :href="'/user/'+user.id">{{ user.comments.length }} Comment(s)</a></p>
             </div>
         </header>
 

@@ -14,7 +14,7 @@
                 </i>
                 <form @submit.prevent="addComment">
                     <input type="password" v-model="form.password" placeholder="Password">
-                    <input type="text" v-model="form.comments" placeholder="Comment">
+                    <input type="text" v-model="form.comment" placeholder="Comment">
                     <input :disabled="loading" type="submit" value="submit">
                 </form>
                 <i v-if="loading" class="text-center text-danger">submitting......</i>
@@ -22,8 +22,8 @@
             <button v-else @click="comment = true">Add Comment</button><br>
             <div v-if="user.comments">
                 <p><strong>Comments</strong></p>
-                <span v-for="(comment, index) in user.comments.split('|')" :key="index">
-                    {{ comment }}<br><hr>
+                <span v-for="(comment, index) in user.comments" :key="index">
+                    {{ comment.comment }}<br><hr>
                 </span>
             </div>
         </header>
@@ -40,7 +40,7 @@
           return {
               form: {
                     password: '',
-                    comments: ''
+                    comment: ''
                 },
               comment: false,
               errors: [],

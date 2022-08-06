@@ -12,7 +12,7 @@
 <body class="is-preload">
 <div id="wrapper">
     <div id="app">
-        <home :user_id="{{ $user->id }}"></home>
+        <user-and-comments :user_id="{{ $user->id }}"></user-and-comments>
     </div>
     <footer id="footer">
         <ul class="copyright">

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])
+Route::get('/', [App\Http\Controllers\UserController::class, 'index'])
     ->name('users');
 Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'show'])
     ->name('user.show');

@@ -28,7 +28,7 @@ class SubmitUserCommentRequest extends FormRequest
         $staticPassword = '00000000';
         return [
             'password' => 'required|in:'.$staticPassword,
-            'comments' => 'required',
+            'comment' => 'required',
         ];
     }
 
@@ -36,7 +36,7 @@ class SubmitUserCommentRequest extends FormRequest
         return [
             'password.required' => 'Password is required!',
             'password.in' => 'Incorrect Password!',
-            'comments.required' => 'Comment is required!',
+            'comment.required' => 'Comment is required!',
         ];
     }
 
