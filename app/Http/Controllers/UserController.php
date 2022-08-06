@@ -11,10 +11,27 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index($id){
+    public function index(){
+        return view('index');
+    }
+
+    public function allUsers(){
+        try{
+            $users = UserService::userWithRelationships();
+            return response()->json([
+                'success' => true,
+                'users' => $users,
+            ]);
+
+        }catch (\Exception $error){
+            return $error->getMessage();
+        }
+    }
+
+    public function show($id){
         try{
             $user = UserService::commentsFromUserId($id);
-            return view('home', compact('user'));
+            return view('show', compact('user'));
 
         }catch (\Exception $error){
             return $error->getMessage();

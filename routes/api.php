@@ -18,5 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/users', [App\Http\Controllers\UserController::class, 'allUsers']);
 Route::put('/user/{id}/comment', [App\Http\Controllers\UserController::class, 'addUserComment']);
 Route::get('/user/{id}/comments', [App\Http\Controllers\UserController::class, 'getUserComments']);

@@ -15,6 +15,10 @@ class UserService
         return new User();
     }
 
+    public static function userWithRelationships(){
+        return self::user()->with('comments');
+    }
+
     public static function commentsFromUserId($id){
         $user = self::user()->where('id', $id)->first();
         if (!$user) {

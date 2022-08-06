@@ -18,7 +18,6 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'password' => Hash::make('00000000'),
-            'comments' => $this->faker->text(60),
         ];
     }
 
