@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -42,15 +43,10 @@ class SubmitUserCommentRequest extends FormRequest
 
     protected function failedValidation(Validator $validator){
         // return errors in json object/array
-        if($this->wantsJson()){
-            $response = response()->json([
-                "success" => false,
-                'errors' => $validator->getMessageBag()->toArray(),
-            ]);
-        }
-
-        throw (new ValidationException($validator, $response))
-            ->errorBag($this->errorBag)
-            ->redirectTo($this->getRedirectUrl());
+        $message = $validator->errors()->all();
+        throw new HttpResponseException(response()->json([
+                'success' => false,
+                'errors' => $message
+            ]));
     }
 }

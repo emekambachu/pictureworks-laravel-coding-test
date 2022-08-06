@@ -22751,7 +22751,7 @@ __webpack_require__.r(__webpack_exports__);
       this.loading = true;
       this.errors = [];
       console.log(this.form);
-      axios.put('/api/user/' + this.user.id + '/comment', this.form).then(function (response) {
+      axios.post('/api/user/' + this.user.id + '/comment', this.form).then(function (response) {
         if (response.data.success === true) {
           console.log(response.data.user);
           _this.submitted = true; //Iterate and clear all fields

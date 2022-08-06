@@ -55,7 +55,7 @@
                 this.loading = true;
                 this.errors = [];
                 console.log(this.form);
-                axios.put('/api/user/'+this.user.id+'/comment', this.form)
+                axios.post('/api/user/'+this.user.id+'/comment', this.form)
                     .then((response) => {
                         if(response.data.success === true){
                             console.log(response.data.user);
