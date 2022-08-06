@@ -8,10 +8,14 @@
 </p>
 
 ## Instructions
-- Used Vue 3 for front-end operations.
+- Used Vue.js 3 for front-end operations and API.
 - Included 2 tables, users and comments.
-- One to Many relationship was used (User has many comments)
-- One test was created to test the submission of comments with user id
+- One to many relationship was used (User has many comments).
+- One test was created to test the submission of comments with user id.
+- Service files for business logic are stored in the Services folder
+- Created UserService for all business logic.
+- Created BaseService for frequently used business logic.
+
 
 ## Routes
 **web.php contains 2 routes**
