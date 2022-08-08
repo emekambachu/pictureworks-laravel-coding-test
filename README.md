@@ -26,5 +26,5 @@
 
 **api.php contains 3 routes**
 - '/api/users' get request for all users.
-- '/api/user/{id}/comment' Post request for each user comment.
+- '/api/user/{id}/comment' Post, submit comment for each user.
 - '/api/user/{id}/comments' Get request for each user and their comments.
